@@ -1,0 +1,75 @@
+CREATE TABLE YourPolicies (
+   Policy_NO int NOT NULL,       
+   Commence_Date DATE NOT Null,       
+   Status varchar(100) NOT NULL, 
+   Policy_Type varchar(50) NOT NULL,
+   Policy_Title varchar(100) NOT NULL,
+   Premium_amount int NOT NULL,
+   Next_Due_date DATE NOT NULL,
+   Sum_Assured int NOT NULL,
+   Nominee_Reg varchar(100) NOT NULL,
+);
+
+INSEINSERT INTO     
+YourPolicies(Policy_NO , Commence_Date ,Status, Policy_Type , Policy_Title, Premium_amount, Next_Due_date, Sum_Assured, Nominee_Reg)    
+VALUES 
+(212121, DATE '2018-01-11', 'Active', 'Gen.Ins', 'Janand',5000, DATE '2019-01-11',100000,'Yes');
+(221212, DATE '2018-01-12', 'Active', 'Gen.Ins', 'BimaGold',2000, DATE '2019-01-12',100000,'Yes'),
+(212121, DATE '2018-01-13', 'Active', 'Gen.Ins', 'Vridhdhi',10000, DATE '2019-01-13',100000,'Yes'),
+(2121221, DATE '2018-01-14', 'Active', 'Gen.Ins', 'ChildCareer',30000, DATE '2019-01-14',300000,'Yes'),
+(212121, DATE '2018-01-11', 'Active', 'Motor', 'Conventional',5000, DATE '2019-01-11',10000,'Yes'),
+(212121, DATE '2018-01-11', 'Active', 'Motor', 'Conventional',5000, DATE '2019-01-11',10000,'Yes');
+
+SELECT * FROM YourPolicies ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=====================================================================================
+
+
+import psycopg2
+from flask import Flask, request, render_template
+conn = psycopg2.connect(database="register", user='postgres', password='test', host='127.0.0.1', port= '5432')
+
+
+app = Flask(__name__)  
+
+@app.route('/', methods =["GET", "POST"])
+def gfg():
+    
+    if request.method == "POST":
+       conn = psycopg2.connect(database="register", user='postgres', password='test', host='127.0.0.1', port= '5432')
+       cursor = conn.cursor()
+       customerid = request.form.get("customerid")
+       name = request.form.get("name")
+       email = request.form.get("email")
+       password = request.form.get("password")
+       address = request.form.get("address")
+       contact = request.form.get("contact")
+       nominee = request.form.get("nominee")
+       relationship = request.form.get("relationship")
+       cursor.execute("INSERT INTO Register(customerid, name, email, password, address, contact, nominee, relationship) VALUES (1234, 'bhuma', 'bhuma1@gmail.com', 'test123', 'chennai', 908907865, 'lokesh', 'mother');")
+       data = cursor.fetchall()
+       print(data)
+       print(customerid, name, email, password, address, contact, nominee, relationship)
+       
+    return render_template("index.html")
+ 
+if __name__=='__main__':
+   app.run()
+
+conn.close()
+
