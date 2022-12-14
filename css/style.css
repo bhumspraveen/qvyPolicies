@@ -1,0 +1,109 @@
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+}
+h1{
+  color: blue;
+}
+h2
+{
+  color: blue;
+}
+#t1{
+  color: blue;
+  margin-left: 550px;
+}
+#customerid
+{
+  margin-left: 25px;
+}
+#t2{
+  margin-left: 550px;
+  color: blue;
+}
+#name
+{
+  margin-left: 65px;
+}
+#t3
+{
+  margin-left: 550px;
+  color: blue;
+}
+#email
+{
+  margin-left: 65px;
+}
+#t4
+{
+  margin-left: 550px;
+  color: blue;
+}
+#password
+{
+  margin-left: 41px;
+}
+#t5
+{
+  margin-left: 546px;
+  color: blue;
+}
+#address
+{
+  margin-left: 53px;
+}
+#t6
+{
+  color: blue;
+  margin-left: 543px;
+}
+#contact
+{
+  margin-left: 50px;
+}
+#t7
+{
+  color: blue;
+  margin-left: 550px;
+}
+#t8
+{
+  color: blue;
+  margin-left: 550px;
+}
+#relationship
+{
+  margin-left: 20px;
+}
+#address
+{
+height: 50px;
+}
+#t9
+{
+  color: blue;
+  margin-left: 550px;
+}
+#submit
+{
+  background-color: #008CBA;
+  color: white;
+  margin-left: 670px;
+  padding: 12px 40px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  
+}
+#submit{
+  transition: 0.4s;
+}
+#submit:hover
+{
+  background-color: white;
+  color: black;
+  border: solid black;
+}
+#r1{
+color: red;
+margin-left: 20px;
+}

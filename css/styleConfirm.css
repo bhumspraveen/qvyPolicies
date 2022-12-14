@@ -1,0 +1,26 @@
+body{ 
+    font-family: Calibri, Helvetica, sans-serif; 
+   }
+   
+   h1{
+    color: blue;
+  }
+  h2
+  {
+    color: blue;
+  }
+  h3{
+    color: green;
+  }
+a{
+    color: blue;    
+}
+#l1{
+    margin-left: 610px;
+}
+#l2{
+    margin-left: 610px;
+}
+#l3{
+    margin-left: 610px;
+}
